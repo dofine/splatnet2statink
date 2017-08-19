@@ -8,9 +8,9 @@ A_VERSION = "0.0.27"
 
 ##############################
 ######## CHANGE BELOW ######## (Keep these secret!)
-API_KEY       = open('auth\\stat.ink.api').read().strip() # for stat.ink
-YOUR_COOKIE   = open('auth\\iksm_session').read().strip()
-SESSION_TOKEN = open('auth\\session_token').read().strip() # to generate new cookies in the future
+API_KEY       = open('auth/stat.ink.api').read().strip() # for stat.ink
+YOUR_COOKIE   = open('auth/iksm_session').read().strip()
+SESSION_TOKEN = open('auth/session_token').read().strip() # to generate new cookies in the future
 ######## CHANGE ABOVE ########
 ##############################
 
