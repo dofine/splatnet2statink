@@ -1,5 +1,4 @@
-# eli fessler
-# clovervidia
+# coding=utf-8
 import os.path, argparse, sys
 import requests, json, time, datetime
 import iksm, dbs
@@ -60,7 +59,10 @@ def load_json(bool):
         print("Pulling data from online...")  # grab data from SplatNet
     url = "https://app.splatoon2.nintendo.net/api/results"
     r = requests.get(url, headers=app_head, cookies=dict(iksm_session=YOUR_COOKIE))
-    return json.loads(r.text)
+    # write json to json file.
+    with open(os.path.join('jsons', 'last50battleresults_{0:%Y%m%d%H%M%S}.json'.format(datetime.datetime.now()))) as f:
+        json.dumps(r.json())
+    return r.json()
 
 def main():
     '''I/O and setup.'''
