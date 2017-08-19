@@ -25,7 +25,7 @@ def get_cookie(session_token):
 
 	r = requests.post(url, headers=app_head, json=body)
 	id_response = json.loads(r.text)
-
+	print(id_response)
 	# get user info
 	app_head = {
 		'User-Agent': 'OnlineLounge/1.0.4 NASDKAPI Android',
