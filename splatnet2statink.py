@@ -60,7 +60,7 @@ def load_json(bool):
     url = "https://app.splatoon2.nintendo.net/api/results"
     r = requests.get(url, headers=app_head, cookies=dict(iksm_session=YOUR_COOKIE))
     # write json to json file.
-    with open(os.path.join('jsons', 'last50battleresults_{0:%Y%m%d%H%M%S}.json'.format(datetime.datetime.now()))) as f:
+    with open('jsons/last50battleresults_{0:%Y%m%d%H%M%S}.json'.format(datetime.datetime.now()), 'w') as f:
         json.dumps(r.json())
     return r.json()
 
